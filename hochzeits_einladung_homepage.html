@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unsere Hochzeit — Einladung</title>
+  <style>
+    :root{--bg:#fff;--accent:#b85c9f;--muted:#666;--paper:#fbf6fb}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:linear-gradient(180deg,var(--paper),#fff); color:#222}
+    header{background:linear-gradient(90deg,rgba(184,92,159,0.12),rgba(252,161,167,0.06)); padding:2.5rem 1rem; text-align:center}
+    .container{max-width:980px;margin:0 auto;padding:1rem}
+    h1{margin:.25rem 0;font-size:2rem;letter-spacing:0.02em}
+    .lead{color:var(--muted);margin-bottom:1rem}
+    .hero{display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap}
+    .names{font-weight:700}
+    .card{background:#fff;border-radius:14px;padding:1rem;box-shadow:0 6px 18px rgba(10,10,20,0.04);}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+    .muted{color:var(--muted)}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    .section{margin:1.25rem 0}
+    .meta{display:flex;gap:.75rem;align-items:center}
+    .meta time{font-weight:700}
+    form label{display:block;font-size:.85rem;margin-bottom:.25rem}
+    form input, form select, form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid #e7e7e9;margin-bottom:.6rem}
+    .photos{display:flex;flex-wrap:wrap;gap:.5rem}
+    .photos img{width:calc(33.333% - .33rem);border-radius:10px;object-fit:cover;height:120px}
+    footer{padding:1rem;text-align:center;color:var(--muted);font-size:.9rem}
+    @media (max-width:560px){h1{font-size:1.4rem}.photos img{width:calc(50% - .25rem)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <h1>Wir heiraten!</h1>
+        <p class="lead">Ihr seid herzlich eingeladen — wir freuen uns sehr, diesen Tag mit euch zu feiern.</p>
+        <div class="card">
+          <div class="names">Anna &amp; Lukas</div>
+          <div class="meta muted"><time datetime="2026-06-12">12. Juni 2026</time> · <span>St. Marien, Wien</span></div>
+        </div>
+      </div>
+      <div class="card" style="min-width:220px;text-align:center">
+        <p style="margin:.25rem 0;font-weight:700">Countdown</p>
+        <div id="countdown" style="font-size:1.3rem">-- Tage --:--:--</div>
+        <a class="btn" href="#rsvp" style="margin-top:.6rem;display:inline-block">Zum RSVP</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section card">
+      <h2>Programm</h2>
+      <div class="grid">
+        <div>
+          <h3>Trauung</h3>
+          <p class="muted">12:00 Uhr — St. Marien, Hauptstraße 1, 1010 Wien</p>
+        </div>
+        <div>
+          <h3>Empfang</h3>
+          <p class="muted">13:30 Uhr — Gutshof Rosen, Rosenweg 3</p>
+        </div>
+        <div>
+          <h3>Feier</h3>
+          <p class="muted">ab 18:00 Uhr — Hofsaal</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Anfahrt &amp; Karte</h2>
+      <p class="muted">Ersetzt den Karten‑Iframe mit eurem Google-Maps-Link oder Mapbox-Link.</p>
+      <div style="width:100%;height:300px;border-radius:10px;overflow:hidden;background:#f1f1f3">
+        <!-- Ersetzen: iframe src mit eurer Google Maps Einbettung -->
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18" style="width:100%;height:100%;border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Fotos</h2>
+      <div class="photos" id="photos">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Foto 1">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Foto 2">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Foto 3">
+      </div>
+    </section>
+
+    <section id="rsvp" class="section card">
+      <h2>RSVP</h2>
+      <p class="muted">Bitte gebt kurz Bescheid, ob ihr kommt. Eure Antwort wird lokal in eurem Browser gespeichert (nur sichtbar für euch). Für eine zentrale Sammlung könnt ihr das Formular per E‑Mail an uns senden.</p>
+      <form id="rsvpForm">
+        <label for="name">Euer Name</label>
+        <input id="name" name="name" required placeholder="z. B. Maria Musterfrau">
+
+        <label for="guests">Anzahl Personen</label>
+        <select id="guests" name="guests">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4+</option>
+        </select>
+
+        <label for="coming">Kommt ihr?</label>
+        <select id="coming" name="coming">
+          <option value="yes">Ja, wir kommen</option>
+          <option value="no">Leider nicht</option>
+        </select>
+
+        <label for="message">Nachricht (optional)</label>
+        <textarea id="message" rows="3" placeholder="z. B. Diätwünsche, Fragen..."></textarea>
+
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+          <button type="submit" class="btn">Speichern</button>
+          <button type="button" id="mailtoBtn" class="btn" style="background:#4a90e2">Per E‑Mail senden</button>
+        </div>
+      </form>
+      <div id="saved" style="margin-top:.6rem;color:var(--muted)"></div>
+    </section>
+
+    <section class="section card">
+      <h2>Unterkunft</h2>
+      <p class="muted">Wir haben ein Zimmerkontingent im Hotel Rosen reserviert. Bitte gebt bei der Buchung "Anna &amp; Lukas Hochzeit" an.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>&copy; Anna &amp; Lukas — Hochzeit 2026</small>
+    </div>
+  </footer>
+
+<script>
+// Countdown
+(function(){
+  const target = new Date('2026-06-12T12:00:00');
+  const el = document.getElementById('countdown');
+  function tick(){
+    const now = new Date();
+    const diff = target - now;
+    if(diff<=0){el.textContent='Heute ist der Tag!';clearInterval(timer);return}
+    const days = Math.floor(diff/86400000);
+    const hrs = String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+    const mins = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+    const secs = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    el.textContent = `${days} Tage ${hrs}:${mins}:${secs}`;
+  }
+  tick();
+  const timer = setInterval(tick,1000);
+})();
+
+// Simple RSVP local save + mailto
+(function(){
+  const form = document.getElementById('rsvpForm');
+  const saved = document.getElementById('saved');
+  const mailtoBtn = document.getElementById('mailtoBtn');
+
+  function load(){
+    const data = JSON.parse(localStorage.getItem('rsvp-anna-lukas')||'[]');
+    if(!data.length) return;
+    saved.textContent = `Du hast bereits ${data.length} Eintrag(e) gespeichert.`;
+  }
+  load();
+
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    const entry = {
+      name: form.name.value,
+      guests: form.guests.value,
+      coming: form.coming.value,
+      message: form.message.value,
+      time: new Date().toISOString()
+    };
+    const list = JSON.parse(localStorage.getItem('rsvp-anna-lukas')||'[]');
+    list.push(entry);
+    localStorage.setItem('rsvp-anna-lukas', JSON.stringify(list));
+    saved.textContent = `Danke — gespeichert! (${entry.name})`;
+    form.reset();
+  });
+
+  mailtoBtn.addEventListener('click', ()=>{
+    const name = form.name.value || '—';
+    const guests = form.guests.value || '—';
+    const coming = form.coming.value || '—';
+    const message = form.message.value || '';
+    const subject = encodeURIComponent('RSVP: ' + name);
+    const body = encodeURIComponent(`Name: ${name}\nAnzahl Personen: ${guests}\nKommt: ${coming}\nNachricht: ${message}`);
+    // Ersetzt 'EMAIL@BEISPIEL.AT' mit eurer Adresse
+    window.location.href = `mailto:EMAIL@BEISPIEL.AT?subject=${subject}&body=${body}`;
+  });
+})();
+
+</script>
+</body>
+</html>
