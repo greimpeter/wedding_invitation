@@ -1,0 +1,134 @@
+:root {
+  --accent: #b85c9f;
+  --bg: #fff;
+  --muted: #666;
+  --paper: #fbf6fb;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Roboto, sans-serif;
+  color: #222;
+  background: var(--paper);
+}
+
+.hero {
+  position: relative;
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1600') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+h2 {
+  color: var(--accent);
+}
+
+.section {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.map-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.gallery .photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gallery img {
+  width: calc(33.333% - 0.5rem);
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 150px;
+}
+
+@media (max-width: 600px) {
+  .gallery img {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, select, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.secondary {
+  background: #4a90e2;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.countdown {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
