@@ -1,55 +1,86 @@
-// Countdown
-(function () {
-  const el = document.getElementById('countdown');
-  const target = new Date('2026-06-12T12:00:00');
-  function tick() {
+// script.js
+// Countdown bis 03.10.2026 11:00 (lokale Zeit)
+(function(){
+  const target = new Date("2026-10-03T11:00:00"); // ISO 8601 local-ish
+  const timerEl = document.getElementById("countTimer");
+
+  function pad(n){ return n<10 ? "0"+n : n; }
+
+  function updateCountdown(){
     const now = new Date();
-    const diff = target - now;
-    if (diff <= 0) {
-      el.textContent = 'Heute ist der Tag!';
-      clearInterval(timer);
+    let diff = target - now;
+    if(diff <= 0){
+      timerEl.textContent = "Heute — die Feier!";
       return;
     }
-    const d = Math.floor(diff / 86400000);
-    const h = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
-    const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
-    const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-    el.textContent = `${d} Tage ${h}:${m}:${s}`;
+    const days = Math.floor(diff / (1000*60*60*24));
+    diff -= days * (1000*60*60*24);
+    const hours = Math.floor(diff / (1000*60*60));
+    diff -= hours * (1000*60*60);
+    const mins = Math.floor(diff / (1000*60));
+    diff -= mins * (1000*60);
+    const secs = Math.floor(diff / 1000);
+
+    timerEl.textContent = `${days} Tage ${pad(hours)}:${pad(mins)}:${pad(secs)}`;
   }
-  tick();
-  const timer = setInterval(tick, 1000);
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 })();
 
-// RSVP local save + mailto
-(function () {
-  const form = document.getElementById('rsvpForm');
-  const saved = document.getElementById('saved');
-  const mailBtn = document.getElementById('mailtoBtn');
+// Form handling: send to Formspree via fetch and show status.
+// IMPORTANT: Ersetze 'YOUR_FORMSPREE_ID' in form action oder hier mit eurer Formspree ID.
+// Wenn ihr das HTML-Form action-Attribut benutzt, Formspree leitet standardmäßig weiter; wir verwenden fetch
+// für ein besseres UX (kein Seitenreload).
+(function(){
+  const form = document.getElementById("rsvpForm");
+  const status = document.getElementById("formStatus");
+  const submitBtn = document.getElementById("submitBtn");
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const entry = {
-      name: form.name.value,
-      guests: form.guests.value,
-      coming: form.coming.value,
-      message: form.message.value,
-      time: new Date().toISOString(),
-    };
-    localStorage.setItem('rsvp-anna-lukas', JSON.stringify(entry));
-    saved.textContent = `Danke, ${entry.name}! Deine Antwort wurde gespeichert.`;
-    form.reset();
-  });
+  // Fallback: uses form.action but replace placeholder if left
+  const formspreeUrl = form.action || "https://formspree.io/f/YOUR_FORMSPREE_ID";
 
-  mailBtn.addEventListener('click', () => {
-    const name = form.name.value || '—';
-    const guests = form.guests.value || '—';
-    const coming = form.coming.value || '—';
-    const message = form.message.value || '';
-    const subject = encodeURIComponent('RSVP: ' + name);
-    const body = encodeURIComponent(
-      `Name: ${name}\nAnzahl Personen: ${guests}\nKommt: ${coming}\nNachricht: ${message}`
-    );
-    // TODO: eigene Mailadresse einsetzen
-    window.location.href = `mailto:EMAIL@BEISPIEL.AT?subject=${subject}&body=${body}`;
+  form.addEventListener("submit", async function(ev){
+    ev.preventDefault();
+
+    status.textContent = "Sende…";
+    submitBtn.disabled = true;
+
+    const fd = new FormData(form);
+
+    // Optional: add a subject for email inbox clarity
+    fd.append("_subject", "RSVP: " + (fd.get("name") || "Unbekannt"));
+
+    try {
+      const resp = await fetch(formspreeUrl, {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: fd
+      });
+
+      if(resp.ok){
+        status.textContent = "Danke! Deine Rückmeldung wurde gesendet.";
+        form.reset();
+      } else {
+        const data = await resp.json().catch(()=>null);
+        if(data && data.errors){
+          status.textContent = "Fehler: " + (data.errors.map(e=>e.message).join(", ") || "Überprüfe die Eingaben.");
+        } else {
+          status.textContent = "Beim Senden ist ein Fehler aufgetreten. Bitte prüfe deine Verbindung oder schreibe uns direkt per Mail.";
+        }
+      }
+    } catch(err){
+      console.error(err);
+      status.textContent = "Netzwerkfehler beim Senden. Bitte versuche es später oder kontaktiere uns per Mail.";
+    } finally {
+      submitBtn.disabled = false;
+      // optional: nach 7s Status zurücksetzen
+      setTimeout(()=> {
+        if(status.textContent.startsWith("Danke")) return;
+        status.textContent = "";
+      }, 7000);
+    }
   });
 })();

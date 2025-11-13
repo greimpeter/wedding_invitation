@@ -2,96 +2,188 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anna & Lukas – Unsere Hochzeit</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Julia &amp; Peter — Hochzeitseinladung</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#F5E1C9" />
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay">
-      <h1>Julia & Peter</h1>
-      <p>Wir heiraten am <strong>12. Juni 2026</strong> in Wien</p>
-      <div id="countdown" class="countdown">-- Tage --:--:--</div>
-      <a href="#rsvp" class="btn">Zur Einladung</a>
+  <div class="page">
+
+    <!-- Countdown oben rechts -->
+    <div id="countdown" class="countdown" aria-live="polite">
+      <div class="label">Noch bis zur Hochzeit</div>
+      <div id="countTimer" class="timer">— Tage —:—:—</div>
     </div>
-  </header>
 
-  <main>
-    <section class="section">
-      <h2>Programm</h2>
-      <div class="timeline">
-        <div>
-          <h3>Trauung</h3>
-          <p>12:00 Uhr – St. Marien, Wien</p>
-        </div>
-        <div>
-          <h3>Empfang</h3>
-          <p>13:30 Uhr – Gutshof Rosen</p>
-        </div>
-        <div>
-          <h3>Feier</h3>
-          <p>ab 18:00 Uhr – Hofsaal</p>
-        </div>
+    <!-- Header -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="couple">Julia &amp; Peter</h1>
+        <p class="subtitle">Wir laden euch herzlich zu unserer Hochzeit ein</p>
+        <p class="date">03. Oktober 2026 — 11:00 Uhr</p>
+
+        <figure class="hero-photo" aria-hidden="true">
+          <!-- Platzhalter-Bild: ersetzt durch euer Foto -->
+          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1400&q=80&fit=crop&auto=format" alt="Julia & Peter" />
+        </figure>
       </div>
-    </section>
+    </header>
 
-    <section class="section">
-      <h2>Anfahrt</h2>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18" loading="lazy"></iframe>
-      </div>
-    </section>
+    <main class="container">
 
-    <section class="section gallery">
-      <h2>Fotos</h2>
-      <div class="photos">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800" alt="Hochzeit 1" />
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800" alt="Hochzeit 2" />
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="Hochzeit 3" />
-      </div>
-    </section>
+      <!-- Einladungstext (Brief) -->
+      <section class="letter" aria-labelledby="letter-title">
+        <h2 id="letter-title">Liebe Freundinnen, liebe Freunde,</h2>
+        <p class="letter-body">
+          Wir freuen uns riesig, euch an unserem großen Tag dabei zu haben. Dieser Brief ist unsere persönliche Einladung:
+          Kommt vorbei, feiert mit uns den Herbst, die Ernte und die Freude — ganz im Geiste des Törggelen. Wir planen einen entspannten Vormittag mit Trauung,
+          anschließender Feier und gutem Essen.
+        </p>
 
-    <section id="rsvp" class="section">
-      <h2>RSVP</h2>
-      <p>Bitte gebt Bescheid, ob ihr kommen könnt:</p>
-      <form id="rsvpForm">
-        <label for="name">Name</label>
-        <input id="name" name="name" required />
-
-        <label for="guests">Anzahl Personen</label>
-        <select id="guests" name="guests">
-          <option value="1">1</option>
-          <option value="2" selected>2</option>
-          <option value="3">3</option>
-          <option value="4">4+</option>
-        </select>
-
-        <label for="coming">Kommt ihr?</label>
-        <select id="coming" name="coming">
-          <option value="yes">Ja</option>
-          <option value="no">Leider nicht</option>
-        </select>
-
-        <label for="message">Nachricht (optional)</label>
-        <textarea id="message" name="message" rows="3"></textarea>
-
-        <div class="buttons">
-          <button type="submit" class="btn">Speichern</button>
-          <button type="button" id="mailtoBtn" class="btn secondary">Per E-Mail senden</button>
+        <div class="signatures">
+          <div class="sig">
+            <div class="sig-name">Julia</div>
+            <div class="sig-line">–––––––––––––</div>
+          </div>
+          <div class="sig">
+            <div class="sig-name">Peter</div>
+            <div class="sig-line">–––––––––––––</div>
+          </div>
         </div>
-      </form>
-      <p id="saved" class="saved"></p>
-    </section>
+      </section>
 
-    <section class="section">
-      <h2>Unterkunft</h2>
-      <p>Wir haben Zimmer im Hotel Rosen reserviert. Bitte nennt „Anna & Lukas Hochzeit“ bei der Buchung.</p>
-    </section>
-  </main>
+      <!-- Agenda -->
+      <section class="agenda" aria-labelledby="agenda-title">
+        <h3 id="agenda-title">Agenda des Tages</h3>
+        <ul>
+          <li><strong>11:00</strong> — Trauung</li>
+          <li><strong>12:00</strong> — Apéro &amp; Fotos</li>
+          <li><strong>13:30</strong> — Festessen (Törggelen-inspirierte Speisen)</li>
+          <li><strong>16:30</strong> — Kaffee &amp; Kuchen</li>
+          <li><strong>19:00</strong> — Tanz &amp; Ausklang</li>
+        </ul>
+      </section>
 
-  <footer>
-    <small>© 2026 Anna & Lukas</small>
-  </footer>
+      <!-- Ort der Feier -->
+      <section class="location" aria-labelledby="location-title">
+        <h3 id="location-title">Ort der Feier</h3>
+
+        <div class="location-grid">
+          <div class="location-photos">
+            <!-- Zwei Bilder; ersetzt durch eure Fotos -->
+            <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad41?w=800&q=60&fit=crop&auto=format" alt="Location 1" />
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=60&fit=crop&auto=format" alt="Location 2" />
+          </div>
+
+          <div class="location-map" aria-hidden="false">
+            <!-- Google Maps Embed: ersetze die src mit eurem Einbettungslink / Koordinaten -->
+            <iframe
+              id="mapframe"
+              title="Karte zur Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.9052287295816!2d11.350634315499633!3d46.49458397911606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776d4a98c3f1f9f%3A0x2a5a923d4b0c3a0f!2sBozen%20(Bozen)%2C%20S%C3%BCdtirol%2C%20Italien!5e0!3m2!1sde!2sde!4v1630000000000!5m2!1sde!2sde"
+              allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <p class="location-note">Adresse: Musterweg 1, 39012 Bozen (bitte ersetzt mit eurer echten Adresse)</p>
+      </section>
+
+      <!-- Übernachtung -->
+      <section class="stay" aria-labelledby="stay-title">
+        <h3 id="stay-title">Übernachtung</h3>
+        <p>
+          Für Gäste von weiter weg empfehlen wir folgende Hotels / Pensionen in der Nähe. Wir helfen gerne bei der Buchung — kontaktiert uns einfach.
+        </p>
+        <ul>
+          <li>Hotel Beispiel — 15 min zu Fuß</li>
+          <li>Pension Herbstlaub — 8 min mit dem Auto</li>
+        </ul>
+      </section>
+
+      <!-- Rückmeldeformular (RSVP) -->
+      <section class="rsvp" aria-labelledby="rsvp-title">
+        <h3 id="rsvp-title">Rückmeldung (RSVP)</h3>
+
+        <form id="rsvpForm" class="form" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
+          <!-- WICHTIG: ersetzt YOUR_FORMSPREE_ID mit eurer Formspree ID -->
+          <div class="field">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="field">
+            <span class="label">Kommst du? *</span>
+            <label><input type="radio" name="attending" value="Ja" required /> Ja</label>
+            <label><input type="radio" name="attending" value="Nein" /> Nein</label>
+            <label><input type="radio" name="attending" value="Vielleicht" /> Vielleicht</label>
+          </div>
+
+          <div class="field">
+            <span class="label">Essen *</span>
+            <label><input type="radio" name="meal" value="Vegetarisch" required /> Vegetarisch</label>
+            <label><input type="radio" name="meal" value="Fleisch" /> Fleisch</label>
+          </div>
+
+          <div class="field">
+            <label for="allergies">Unverträglichkeiten / Sonstiges</label>
+            <textarea id="allergies" name="allergies" rows="3" placeholder="z. B. Gluten, Laktose, etc."></textarea>
+          </div>
+
+          <div class="field dates">
+            <div>
+              <label for="arrival">Geplante Anreise (Datum/Uhrzeit)</label>
+              <input type="datetime-local" id="arrival" name="arrival" />
+            </div>
+            <div>
+              <label for="departure">Geplante Abreise (Datum/Uhrzeit)</label>
+              <input type="datetime-local" id="departure" name="departure" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Nachricht an das Brautpaar</label>
+            <input type="text" id="message" name="message" />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn">Absenden</button>
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+
+        <p class="privacy-note">Deine Daten werden ausschließlich zur Organisation der Feier verwendet.</p>
+      </section>
+
+      <!-- Kontakt -->
+      <section class="contacts" aria-labelledby="contacts-title">
+        <h3 id="contacts-title">Kontakt</h3>
+        <p>Bei Fragen: Julia &amp; Peter — <a href="mailto:julieundpeter@example.com">julieundpeter@example.com</a> oder Tel. +49 170 1234567</p>
+      </section>
+
+    </main>
+
+    <!-- Fußzeile -->
+    <footer class="footer">
+      <p>&copy; 2026 Julia &amp; Peter</p>
+    </footer>
+
+    <!-- dekorative Blätter (SVG) -->
+    <svg class="leaves" aria-hidden="true" viewBox="0 0 800 200" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0" stop-color="#D2691E"/>
+          <stop offset="1" stop-color="#8B4513"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,160 C150,100 250,40 400,70 C550,100 650,160 800,120 L800,200 L0,200Z" fill="url(#g1)" opacity="0.12"></path>
+    </svg>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
