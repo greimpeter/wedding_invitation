@@ -86,6 +86,16 @@ button { padding: .8rem 1.4rem; border-radius: var(--radius); border: none; curs
 .leaf2 { left: 45%; animation-duration: 12s; animation-delay: 3s; }
 .leaf3 { left: 75%; animation-duration: 10.5s; animation-delay: 1.5s; }
 
+/* Bottom leaves*/
+.bottom-leaf {
+  position: fixed;
+  bottom: 0;
+  left: auto; /* kann individuell angepasst werden */
+  right: auto;
+  animation: none; /* bleibt fix, keine Bewegung */
+  opacity: 0.7; /* optional, leicht transparent */
+}
+
 @keyframes fall {
   0% { transform: translateY(-10vh) rotate(0deg); }
   50% { transform: translateY(60vh) rotate(180deg); }
