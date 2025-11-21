@@ -8,6 +8,9 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <link rel="stylesheet" href="styles.css" />
   <meta name="theme-color" content="#F5E1C9" />
@@ -81,21 +84,21 @@
       <section class="rsvp" aria-labelledby="rsvp-title">
         <h3 id="rsvp-title">Rückmeldung (RSVP)</h3>
 
-        <form id="rsvpForm" class="form" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
+        <form id="rsvpForm" class="form" method="POST" action="https://formspree.io/f/mldveajv">
           <div class="field"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
-          <div class="field"><span class="label">Kommst du?</span>
+          <div class="field"><span class="label">Kommst du? *</span>
             <label><input type="radio" name="attending" value="Ja" required> Ja</label>
             <label><input type="radio" name="attending" value="Nein"> Nein</label>
           </div>
 
-          <div class="field"><span class="label">Essen</span>
+          <div class="field"><span class="label">Essen *</span>
             <label><input type="radio" name="meal" value="Vegetarisch" required> Vegetarisch</label>
             <label><input type="radio" name="meal" value="Fleisch"> Fleisch</label>
           </div>
 
-          <div class="field"><label for="allergies">Unverträglichkeiten</label><textarea id="allergies" name="allergies"></textarea></div>
+          <div class="field"><label for="allergies">Unverträglichkeiten</label><textarea id="allergies" name="allergies" placeholder="z.B. Laktose, Gluten, Nüsse"></textarea></textarea></div>
 
-          <div class="field dates">
+          <div class="field dates"><span class="label">Reisepläne</span>
             <div><label for="arrival">Anreise</label><input type="datetime-local" id="arrival" name="arrival"></div>
             <div><label for="departure">Abreise</label><input type="datetime-local" id="departure" name="departure"></div>
           </div>
@@ -107,26 +110,48 @@
         </form>
       </section>
 
-      <section class="contacts"><h3>Kontakt</h3><p>Julia & Peter — julie@example.com</p></section>
+      <section class="rides" aria-labelledby="rides-title">
+        <h3 id="rides-title">Mitfahrgelegenheiten</h3>
+
+        <p>
+          Falls ihr Fahrgemeinschaften bilden möchtet, könnt ihr euch hier in die Liste eintragen
+          oder nach verfügbaren Plätzen suchen:
+        </p>
+
+        <a class="ride-link" href="LINK-ZUR-EXCEL-DATEI" target="_blank" rel="noopener">
+          ➜ Zur Mitfahrgelegenheiten-Liste (Excel)
+        </a>
+      </section>
+
+      <section id="contact">
+        <h2>Kontakt</h2>
+
+        <div class="contact-item">
+          <strong>Julia</strong><br>
+          <i class="fa-solid fa-phone"></i> <a>+49 123 456789</a><br>
+          <i class="fa-solid fa-envelope"></i> <a>julia@example.com</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Peter</strong><br>
+          <i class="fa-solid fa-phone"></i> <a>+49 198 765432</a><br>
+          <i class="fa-solid fa-envelope"></i> <a>peter@example.com</a>
+        </div>
+      </section>
+
     </main>
 
     <footer class="footer"><p>&copy; 2026 Julia & Peter</p></footer>
 
     <!-- Variante C: Weinranken + Kastanien -->
-    <img class="vine vine-tl" src="img/grapevine.svg" alt="">
-    <img class="vine vine-tr" src="img/grapevine.svg" alt="">
-    <img class="vine vine-bl" src="img/grapevine.svg" alt="">
-    <img class="vine vine-br" src="img/grapevine.svg" alt="">
+    <!-- <img class="vine vine-tl" src="img/grapevine.svg" alt=""> -->
 
     <!-- Animated falling leaves -->
-    <div class="falling-leaves">
+    <!-- <div class="falling-leaves">
       <img src="img/falling_leaves.png" class="leaf leaf1" alt="">
       <img src="img/falling_leaves.png" class="leaf leaf2" alt="">
       <img src="img/falling_leaves.png" class="leaf leaf3" alt="">
-      <img src="img/falling_leaves.png" class="bottom-leaf" alt="">
-      <img src="img/falling_leaves.png" class="bottom-leaf" alt="">
-      <img src="img/falling_leaves.png" class="bottom-leaf" alt="">
-    </div>
+    </div> -->
 
   </div>
 

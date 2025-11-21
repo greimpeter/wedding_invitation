@@ -75,9 +75,6 @@ button { padding: .8rem 1.4rem; border-radius: var(--radius); border: none; curs
 /* Vines */
 .vine { position: fixed; pointer-events: none; opacity: .12; z-index: 1; width: 220px; }
 .vine-tl { top: 0; left: 0; transform: rotate(0deg); }
-.vine-tr { top: 0; right: 0; transform: scaleX(-1); }
-.vine-bl { bottom: 0; left: 0; transform: scaleY(-1); }
-.vine-br { bottom: 0; right: 0; transform: scale(-1,-1); }
 
 /* Falling leaves */
 .falling-leaves { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: visible; }
@@ -89,12 +86,29 @@ button { padding: .8rem 1.4rem; border-radius: var(--radius); border: none; curs
 /* Bottom leaves*/
 .bottom-leaf {
   position: fixed;
+  width: 200px;
   bottom: 0;
   left: auto; /* kann individuell angepasst werden */
   right: auto;
   animation: none; /* bleibt fix, keine Bewegung */
   opacity: 0.7; /* optional, leicht transparent */
+  transform: rotate(-70deg);
 }
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  margin-top: 40px;
+}
+.contact-item {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+#contact i {
+  margin-right: 8px;
+  color: #8b4513; /* herbstliches Braun */
+}
+
 
 @keyframes fall {
   0% { transform: translateY(-10vh) rotate(0deg); }
