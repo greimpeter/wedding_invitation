@@ -1,6 +1,7 @@
-<!-- Updated index.html with Variante C + falling leaves. Full file here. -->
 <!doctype html>
+
 <html lang="de">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -15,23 +16,44 @@
   <link rel="stylesheet" href="styles.css" />
   <meta name="theme-color" content="#F5E1C9" />
 </head>
+
+
+
 <body>
+
+  <img src="img/grapevines.png" alt="" class="decor decor-top-left">
+  <img src="img/grapevines.png" alt="" class="decor decor-top-right">
+
   <div class="page">
 
-    <div id="countdown" class="countdown" aria-live="polite">
-      <div class="label">Noch bis zur Hochzeit</div>
-      <div id="countTimer" class="timer">— Tage —:—:—</div>
+    <div id="countdown" class="countdown">
+      <div class="label">Countdown bis zur Hochzeit</div>
+      <div id="countTimerMain" class="timer">— Tage —:—:—</div>
+    </div>
+
+    <div id="countdown-second" class="countdown countdown--light">
+      <div class="label">News in</div>
+      <div id="countTimerSecond" class="timer">— Tage —:—:—</div>
     </div>
 
     <header class="hero">
       <div class="hero-content">
         <h1 class="couple">Julia &amp; Peter</h1>
-        <p class="subtitle">Wir laden euch herzlich zu unserer Hochzeit ein</p>
-        <p class="date">03. Oktober 2026 — 11:00 Uhr</p>
+        <p class="subtitle">heiraten!</p>
+        <img src="img/eheringe.png" alt="" class="rings">
+        <p class="date">03. Oktober 2026</p>
 
-        <figure class="hero-photo" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1400&q=80&fit=crop&auto=format" alt="Julia & Peter" />
-        </figure>
+        <!-- <figure class="hero-photo" aria-hidden="true">
+          <img src="img/verlobung.jpeg" alt="Julia & Peter"/>
+        </figure> -->
+
+        <div class="hero-photo triple-hero">
+          <img src="img/hof.jpg"  class="hero-img hero-left"  alt="">
+          <img src="img/verlobung.jpeg" class="hero-img hero-middle" alt="">
+          <img src="img/vino1.jpeg" class="hero-img hero-right" alt="">
+        </div>
+
+
       </div>
     </header>
 
@@ -39,7 +61,9 @@
       <section class="letter" aria-labelledby="letter-title">
         <h2 id="letter-title">Liebe Freundinnen, liebe Freunde,</h2>
         <p class="letter-body">
-          Wir freuen uns riesig, euch an unserem großen Tag dabei zu haben...
+          Wir freuen uns riesig, euch an unserem großen Tag dabei zu haben...<br>
+          Bitte meldet bis xx zurück, ob ihr kommen könnt. <a href="#rsvp">Link</a><br>
+          Oder kontaktiert uns <a href="#contact">unter</a>...
         </p>
         <div class="signatures">
           <div class="sig"><div class="sig-name">Julia</div><div class="sig-line">–––––––––––––</div></div>
@@ -47,29 +71,31 @@
         </div>
       </section>
 
+      <!-- <img src="img/keschtn.png" alt="" class="interim-image">
+
       <section class="agenda" aria-labelledby="agenda-title">
         <h3 id="agenda-title">Agenda des Tages</h3>
         <ul>
-          <li><strong>11:00</strong> — Trauung</li>
-          <li><strong>12:00</strong> — Apéro & Fotos</li>
-          <li><strong>13:30</strong> — Festessen</li>
-          <li><strong>16:30</strong> — Kaffee & Kuchen</li>
-          <li><strong>19:00</strong> — Tanz & Ausklang</li>
+          <li><span class="time"><strong>11:00</strong></span><span class="desc">Trauung very long</span></li>
+          <li><span class="time"><strong>11:00</strong></span><span class="desc">Aperitif</span></li>
+          <li><span class="time"><strong>11:00</strong></span><span class="desc">Törggelen</span></li>
         </ul>
-      </section>
+      </section> -->
+
+      <img src="img/feiern.png" alt="" class="interim-image">
+
 
       <section class="location" aria-labelledby="location-title">
         <h3 id="location-title">Ort der Feier</h3>
 
         <div class="location-grid">
-          <div class="location-photos">
+          <!-- <div class="location-photos">
             <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad41?w=800&q=60&fit=crop&auto=format" alt="Location 1" />
             <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=60&fit=crop&auto=format" alt="Location 2" />
-          </div>
+          </div> -->
 
           <div class="location-map">
-            <iframe title="Karte"
-              src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2735.142785258668!2d11.6389851762143!3d46.72264517112234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477805bb7349a151%3A0xd5c06b2acfd7a626!2sBurgerhof%20Me%C3%9Fner!5e0!3m2!1sde!2sat!4v1764880343477!5m2!1sde!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
@@ -81,7 +107,7 @@
         <p>Empfohlene Hotels in der Nähe...</p>
       </section>
 
-      <section class="rsvp" aria-labelledby="rsvp-title">
+      <section id="rsvp" class="rsvp" aria-labelledby="rsvp-title">
         <h3 id="rsvp-title">Rückmeldung (RSVP)</h3>
 
         <form id="rsvpForm" class="form" method="POST" action="https://formspree.io/f/mldveajv">
@@ -99,8 +125,8 @@
           <div class="field"><label for="allergies">Unverträglichkeiten</label><textarea id="allergies" name="allergies" placeholder="z.B. Laktose, Gluten, Nüsse"></textarea></textarea></div>
 
           <div class="field dates"><span class="label">Reisepläne</span>
-            <div><label for="arrival">Anreise</label><input type="datetime-local" id="arrival" name="arrival"></div>
-            <div><label for="departure">Abreise</label><input type="datetime-local" id="departure" name="departure"></div>
+            <div><label for="arrival">Anreise </label><input type="date" id="arrival" name="arrival"></div>
+            <div><label for="departure">Abreise </label><input type="date" id="departure" name="departure"></div>
           </div>
 
           <div class="form-actions">
@@ -110,7 +136,7 @@
         </form>
       </section>
 
-      <section class="rides" aria-labelledby="rides-title">
+      <!-- <section class="rides" aria-labelledby="rides-title">
         <h3 id="rides-title">Mitfahrgelegenheiten</h3>
 
         <p>
@@ -118,10 +144,10 @@
           oder nach verfügbaren Plätzen suchen:
         </p>
 
-        <a class="ride-link" href="LINK-ZUR-EXCEL-DATEI" target="_blank" rel="noopener">
+        <a class="ride-link" href="https://docs.google.com/spreadsheets/d/1CTkgeAbjO3eJDR0qTAMO9CVVFVeLUWd_/edit?usp=sharing&ouid=104866232799222840073&rtpof=true&sd=true" target="_blank" rel="noopener">
           ➜ Zur Mitfahrgelegenheiten-Liste (Excel)
         </a>
-      </section>
+      </section> -->
 
       <section id="contact">
         <h2>Kontakt</h2>

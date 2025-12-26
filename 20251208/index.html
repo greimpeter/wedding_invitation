@@ -1,0 +1,183 @@
+<!doctype html>
+
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Julia &amp; Peter — Hochzeitseinladung</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#F5E1C9" />
+</head>
+
+
+
+<body>
+
+  <img src="img/grapevines.png" alt="" class="decor decor-top-left">
+  <img src="img/grapevines.png" alt="" class="decor decor-top-right">
+
+  <div class="page">
+
+    <div id="countdown" class="countdown" aria-live="polite">
+      <div class="label">Countdown bis zur Hochzeit</div>
+      <div id="countTimer" class="timer">— Tage —:—:—</div>
+    </div>
+    <div id="countdown" class="countdown-light" aria-live="polite">
+      <div class="label">News in</div>
+      <div id="countTimer2" class="timer">— Tage —:—:—</div>
+    </div>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="couple">Julia &amp; Peter</h1>
+        <p class="subtitle">heiraten!</p>
+        <img src="img/eheringe.png" alt="" class="rings">
+        <p class="date">03. Oktober 2026</p>
+
+        <!-- <figure class="hero-photo" aria-hidden="true">
+          <img src="img/verlobung.jpeg" alt="Julia & Peter"/>
+        </figure> -->
+
+        <div class="hero-photo triple-hero">
+          <img src="img/oasis.jpg"  class="hero-img hero-left"  alt="">
+          <img src="img/verlobung.jpeg" class="hero-img hero-middle" alt="">
+          <img src="img/asien.jpg" class="hero-img hero-right" alt="">
+        </div>
+
+
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="letter" aria-labelledby="letter-title">
+        <h2 id="letter-title">Liebe Freundinnen, liebe Freunde,</h2>
+        <p class="letter-body">
+          Wir freuen uns riesig, euch an unserem großen Tag dabei zu haben...
+        </p>
+        <div class="signatures">
+          <div class="sig"><div class="sig-name">Julia</div><div class="sig-line">–––––––––––––</div></div>
+          <div class="sig"><div class="sig-name">Peter</div><div class="sig-line">–––––––––––––</div></div>
+        </div>
+      </section>
+
+      <img src="img/keschtn.png" alt="" class="interim-image">
+
+      <section class="agenda" aria-labelledby="agenda-title">
+        <h3 id="agenda-title">Agenda des Tages</h3>
+        <ul>
+          <li><span class="time"><strong>11:00</strong></span><span class="desc">Trauung very long</span></li>
+          <li><span class="time"><strong>11:00</strong></span><span class="desc">Aperitif</span></li>
+          <li><span class="time"><strong>11:00</strong></span><span class="desc">Törggelen</span></li>
+        </ul>
+      </section>
+
+      <img src="img/feiern.png" alt="" class="interim-image">
+
+
+      <section class="location" aria-labelledby="location-title">
+        <h3 id="location-title">Ort der Feier</h3>
+
+        <div class="location-grid">
+          <div class="location-photos">
+            <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad41?w=800&q=60&fit=crop&auto=format" alt="Location 1" />
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=60&fit=crop&auto=format" alt="Location 2" />
+          </div>
+
+          <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2735.142785258668!2d11.6389851762143!3d46.72264517112234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477805bb7349a151%3A0xd5c06b2acfd7a626!2sBurgerhof%20Me%C3%9Fner!5e0!3m2!1sde!2sat!4v1764880343477!5m2!1sde!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <p class="location-note">Adresse: Musterweg 1, Bozen</p>
+      </section>
+
+      <section class="stay" aria-labelledby="stay-title">
+        <h3 id="stay-title">Übernachtung</h3>
+        <p>Empfohlene Hotels in der Nähe...</p>
+      </section>
+
+      <section class="rsvp" aria-labelledby="rsvp-title">
+        <h3 id="rsvp-title">Rückmeldung (RSVP)</h3>
+
+        <form id="rsvpForm" class="form" method="POST" action="https://formspree.io/f/mldveajv">
+          <div class="field"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
+          <div class="field"><span class="label">Kommst du? *</span>
+            <label><input type="radio" name="attending" value="Ja" required> Ja</label>
+            <label><input type="radio" name="attending" value="Nein"> Nein</label>
+          </div>
+
+          <div class="field"><span class="label">Essen *</span>
+            <label><input type="radio" name="meal" value="Vegetarisch" required> Vegetarisch</label>
+            <label><input type="radio" name="meal" value="Fleisch"> Fleisch</label>
+          </div>
+
+          <div class="field"><label for="allergies">Unverträglichkeiten</label><textarea id="allergies" name="allergies" placeholder="z.B. Laktose, Gluten, Nüsse"></textarea></textarea></div>
+
+          <div class="field dates"><span class="label">Reisepläne</span>
+            <div><label for="arrival">Anreise </label><input type="date" id="arrival" name="arrival"></div>
+            <div><label for="departure">Abreise </label><input type="date" id="departure" name="departure"></div>
+          </div>
+
+          <div class="form-actions">
+            <button id="submitBtn" type="submit">Absenden</button>
+            <div id="formStatus" class="form-status"></div>
+          </div>
+        </form>
+      </section>
+
+      <section class="rides" aria-labelledby="rides-title">
+        <h3 id="rides-title">Mitfahrgelegenheiten</h3>
+
+        <p>
+          Falls ihr Fahrgemeinschaften bilden möchtet, könnt ihr euch hier in die Liste eintragen
+          oder nach verfügbaren Plätzen suchen:
+        </p>
+
+        <a class="ride-link" href="https://docs.google.com/spreadsheets/d/1CTkgeAbjO3eJDR0qTAMO9CVVFVeLUWd_/edit?usp=sharing&ouid=104866232799222840073&rtpof=true&sd=true" target="_blank" rel="noopener">
+          ➜ Zur Mitfahrgelegenheiten-Liste (Excel)
+        </a>
+      </section>
+
+      <section id="contact">
+        <h2>Kontakt</h2>
+
+        <div class="contact-item">
+          <strong>Julia</strong><br>
+          <i class="fa-solid fa-phone"></i> <a>+49 123 456789</a><br>
+          <i class="fa-solid fa-envelope"></i> <a>julia@example.com</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Peter</strong><br>
+          <i class="fa-solid fa-phone"></i> <a>+49 198 765432</a><br>
+          <i class="fa-solid fa-envelope"></i> <a>peter@example.com</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer"><p>&copy; 2026 Julia & Peter</p></footer>
+
+    <!-- Variante C: Weinranken + Kastanien -->
+    <!-- <img class="vine vine-tl" src="img/grapevine.svg" alt=""> -->
+
+    <!-- Animated falling leaves -->
+    <!-- <div class="falling-leaves">
+      <img src="img/falling_leaves.png" class="leaf leaf1" alt="">
+      <img src="img/falling_leaves.png" class="leaf leaf2" alt="">
+      <img src="img/falling_leaves.png" class="leaf leaf3" alt="">
+    </div> -->
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,25 +1,34 @@
 // script.js — Countdown + Form Feedback
 
 // Countdown
-const targetDate = new Date("2026-10-03T11:00:00").getTime();
-const timerEl = document.getElementById("countTimer");
+function createCountdown(elementId, targetDateString) {
+  const target = new Date(targetDateString).getTime();
+  const el = document.getElementById(elementId);
 
-setInterval(() => {
-  const now = Date.now();
-  const delta = targetDate - now;
+  setInterval(() => {
+    const now = Date.now();
+    const delta = target - now;
 
-  if (delta <= 0) {
-    timerEl.textContent = "Heute ist der große Tag!";
-    return;
-  }
+    if (delta <= 0) {
+      el.textContent = "Heute ist der große Tag!";
+      return;
+    }
 
-  const d = Math.floor(delta / (1000 * 60 * 60 * 24));
-  const h = Math.floor((delta / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((delta / (1000 * 60)) % 60);
-  const s = Math.floor((delta / 1000) % 60);
+    const d = Math.floor(delta / (1000 * 60 * 60 * 24));
+    const h = Math.floor((delta / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((delta / (1000 * 60)) % 60);
+    const s = Math.floor((delta / 1000) % 60);
 
-  timerEl.textContent = `${d} Tage ${h} Std ${m} Min ${s} Sek`;
-}, 1000);
+    el.textContent = `${d} Tage ${h} Std ${m} Min ${s} Sek`;
+  }, 1000);
+}
+
+// Main countdown
+createCountdown("countTimerMain", "2026-10-03T12:00:00");
+
+// Second countdown – freely choose date
+createCountdown("countTimerSecond", "2026-04-18T20:00:00");
+
 
 // RSVP Form handling with Formspree
 const rsvpForm = document.getElementById('rsvpForm');
