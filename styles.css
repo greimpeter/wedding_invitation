@@ -147,6 +147,12 @@ body {
     width: 100%;
     justify-self: center;
   }
+
+  .one-line-text {
+  white-space: nowrap;          /* never wrap to next line */
+  font-size: clamp(40px, 4vw, 60px) !important;
+}
+
 }
 
 
@@ -268,10 +274,7 @@ button { padding: .8rem 1.4rem; border-radius: var(--radius); border: none; curs
 }
 
 
-.one-line-text {
-  white-space: nowrap;          /* never wrap to next line */
-  font-size: clamp(14px, 4vw, 20px);
-}
+
 
 
 
