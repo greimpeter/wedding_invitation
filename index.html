@@ -32,13 +32,13 @@
     </div>
 
     <div id="countdown-second" class="countdown countdown--light">
-      <div class="label">News in</div>
+      <div class="label">Update in</div>
       <div id="countTimerSecond" class="timer">— Tage —:—:—</div>
     </div>
 
     <header class="hero">
       <div class="hero-content">
-        <h1 class="couple">Julia &amp; Peter</h1>
+        <h1 class="couple">Julia & Peter</h1>
         <p class="subtitle">heiraten!</p>
         <img src="img/eheringe.png" alt="" class="rings">
         <p class="date">03. Oktober 2026</p>
@@ -58,16 +58,39 @@
     </header>
 
     <main class="container">
+
+      <div style="font-family: Libre Baskerville, sans-serif; font-size: 1.5rem; text-align: center;"><h1>🎉 Einladung 🎉</h1></div>
+
+
       <section class="letter" aria-labelledby="letter-title">
-        <h2 id="letter-title">Liebe Freundinnen, liebe Freunde,</h2>
+        <h2 id="letter-title">Liebe Familie, liebe Freunde,</h2>
         <p class="letter-body">
-          Wir freuen uns riesig, euch an unserem großen Tag dabei zu haben...<br>
-          Bitte meldet bis xx zurück, ob ihr kommen könnt. <a href="#rsvp">Link</a><br>
-          Oder kontaktiert uns <a href="#contact">unter</a>...
+          was als fränkisch südtiroler Abenteuer in Marrakesch begann wird nun besiegelt - wir heiraten.
+          Und das möchten wir mit dir feiern!<br><br>
+
+          Nach der Trauung im Standesamt Brixen (Uhrzeit wird noch bekannt gegeben) verbringen wir den Tag am Burgerhof Meßner.<br>
+          Dort erwarten uns eine Mittagsjause, ein unklassischer Törggelen-Abend, gute Musik und jede Menge Spaß 
+          (Mehr zum Ablauf des Tages im Zuge des Updates)<br><br>
+
+          Wir haben Zimmer im Hotel Tourist reserviert, die gebucht werden können. Mehr Infos dazu <a href="#stay">hier</a>.<br><br>
+
+          Bitte melde über das <a href="#rsvp">Anmeldeformular</a> unten bis zum <span style="font-weight: bold;">1. Mai 2026</span> zurück, ob du kommen kannst.<br><br>
+
+          Der Tag soll frei von irgendwelchen Konventionen oder Zwängen sein.
+          Dresscode ist demnach elegant, but not too serious.<br><br>
+
+          Wir freuen uns auf einen unvergesslichen Tag!<br><br>
+
+          <a href="#contact">Kontaktier</a> uns gerne bei Fragen.<br><br>
+
+          P.S. Wenn du etwas schenken möchtest, freuen uns gerne über einen kleine finanzielle Unterstützung (die Verlobungsreise ist etwas ausgeartet 😉)
+
         </p>
         <div class="signatures">
-          <div class="sig"><div class="sig-name">Julia</div><div class="sig-line">–––––––––––––</div></div>
-          <div class="sig"><div class="sig-name">Peter</div><div class="sig-line">–––––––––––––</div></div>
+          <div class="sig">
+            <div class="sig-name">Julia <span style="font-family: Libre Baskerville, sans-serif; font-size: 17px;">&</span> Peter</div>
+            <div class="sig-line"></div>
+          </div>
         </div>
       </section>
 
@@ -88,6 +111,11 @@
       <section class="location" aria-labelledby="location-title">
         <h3 id="location-title">Ort der Feier</h3>
 
+        <p>
+          Die Feier wird auf einem kleinen authentischen Bio Bauernhof stattfinden.<br><br>
+          Dort erwarten uns stilecht südtiroler Spezialitäten, hausgemachte Weine und eine idyllische Atmosphäre.
+        </p>
+
         <div class="location-grid">
           <!-- <div class="location-photos">
             <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad41?w=800&q=60&fit=crop&auto=format" alt="Location 1" />
@@ -99,16 +127,27 @@
           </div>
         </div>
 
-        <p class="location-note">Adresse: Musterweg 1, Bozen</p>
+        <p class="location-note">Adresse: Thalhoferstraße 7, 39042 Brixen, Italien</p>
       </section>
 
-      <section class="stay" aria-labelledby="stay-title">
+      <section id="stay" class="stay" aria-labelledby="stay-title">
         <h3 id="stay-title">Übernachtung</h3>
-        <p>Empfohlene Hotels in der Nähe...</p>
+        <p>Wir haben Zimmer im Hotel Tourist reserviert:</p>
+        <ul class="inline-list">
+          <li>Superior Doppelzimmer für 220€/Nacht (Mindestaufenthalt 2 Nächte) oder</li>
+          <li>Standardzimmer für 160€/Nacht (auch als Einzelzimmer möglich)</li>
+        </ul>
+        <p>
+          Diese können telefonisch mit dem Code "Hochzeit Julia & Peter" gebucht werden (📞 +39 0472 831545). Bezahlung dann vor Ort im Hotel.<br><br>
+          Natürlich sind auch andere Hotels, Pensionen oder Ferienwohnungen in der Umgebung möglich.
+          Wir empfehlen aber in jedem Fall eine frühzeitige Buchung, 
+          weil Oktober Hauptsaison im Eisacktal ist und an diesem Tag auch noch ein Fest in Brixen stattfindet.
+        </p>
       </section>
 
       <section id="rsvp" class="rsvp" aria-labelledby="rsvp-title">
-        <h3 id="rsvp-title">Rückmeldung (RSVP)</h3>
+        <h3 id="rsvp-title">Rückmeldung <span style="font-weight: normal; font-size: 0.75em;">pro Person</span></h3>
+        
 
         <form id="rsvpForm" class="form" method="POST" action="https://formspree.io/f/mldveajv">
           <div class="field"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
@@ -124,7 +163,7 @@
 
           <div class="field"><label for="allergies">Unverträglichkeiten</label><textarea id="allergies" name="allergies" placeholder="z.B. Laktose, Gluten, Nüsse"></textarea></textarea></div>
 
-          <div class="field dates"><span class="label">Reisepläne</span>
+          <div class="field dates"><span class="label">Evtl. weißt du auch schon deine Reisepläne</span>
             <div><label for="arrival">Anreise </label><input type="date" id="arrival" name="arrival"></div>
             <div><label for="departure">Abreise </label><input type="date" id="departure" name="departure"></div>
           </div>
@@ -154,14 +193,14 @@
 
         <div class="contact-item">
           <strong>Julia</strong><br>
-          <i class="fa-solid fa-phone"></i> <a>+49 123 456789</a><br>
-          <i class="fa-solid fa-envelope"></i> <a>julia@example.com</a>
+          <i class="fa-solid fa-phone"></i> <a>+43 660 5862248</a><br>
+          <i class="fa-solid fa-envelope"></i> <a>brunni.juli@gmail.com</a>
         </div>
 
         <div class="contact-item">
           <strong>Peter</strong><br>
-          <i class="fa-solid fa-phone"></i> <a>+49 198 765432</a><br>
-          <i class="fa-solid fa-envelope"></i> <a>peter@example.com</a>
+          <i class="fa-solid fa-phone"></i> <a>+43 664 88559660</a><br>
+          <i class="fa-solid fa-envelope"></i> <a>peter.greim5@gmail.com</a>
         </div>
       </section>
 
