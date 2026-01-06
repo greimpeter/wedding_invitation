@@ -26,7 +26,7 @@ body {
   position: fixed;
   right: 20px;
   background: #fffaf4cc;
-  padding: 12px 18px;
+  padding: 6px 9px;
   border-radius: var(--radius);
   backdrop-filter: blur(6px);
   box-shadow: 0 2px 8px #0002;
@@ -35,11 +35,11 @@ body {
 }
 /* first box position */
 #countdown {
-  top: 20px;
+  top: 10px;
 }
 /* second one slightly lower */
 #countdown-second {
-  top: 90px; /* adjust freely */
+  top: 70px; /* adjust freely */
 }
 
 /* Label + timer shared styles */
@@ -53,12 +53,12 @@ body {
 
 .timer {
   font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 /* kleinerer Text nur für die zweite Box */
 .countdown--light .timer {
-  font-size: 1rem;        /* etwas kleiner */
+  font-size: 0.8rem;        /* etwas kleiner */
   font-weight: 600;
 }
 
@@ -172,6 +172,10 @@ h2,h3 { font-family: "Playfair Display", serif; }
 
 
 /* Letter */
+.invitation-header {
+  font-family: "Libre Baskerville", sans-serif;
+  text-align: center;
+}
 .letter-body { font-family: "Libre Baskerville", serif; line-height: 1.7; }
 .signatures { display: flex; gap: 3rem; margin-top: 2rem; }
 .sig-name { font-family: "Pacifico", "Brush Script MT", serif; font-size: 2rem; margin-bottom: 6px;}
