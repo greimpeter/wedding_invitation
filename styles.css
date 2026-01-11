@@ -12,7 +12,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, sans-serif;
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.7;
 }
 .page { position: relative; overflow-x: hidden; }
 
@@ -96,7 +97,7 @@ body {
   padding: 4rem 1rem;
   /* background: linear-gradient(to bottom, #f3e3d0, transparent); */
 }
-.hero h1 { font-family: "Playfair Display", serif; font-size: 4rem; margin: 0; }
+.hero h1 { font-family: "Libre Baskerville", serif; font-size: 4rem; margin: 0; }
 .hero {padding-left: 8%; padding-right: 8%;}
 .subtitle { font-family: "Libre Baskerville", serif; margin-top: .5rem; font-size: 1.3rem; }
 .date { margin-top: .3rem; font-weight: 600; color: var(--accent); font-size: 1.5rem;}
@@ -168,7 +169,7 @@ section {
   border-radius: var(--radius);
   box-shadow: 0 2px 8px #0001;
 }
-h2,h3 { font-family: "Playfair Display", serif; }
+h2,h3 { font-family: "Libre Baskerville", serif; }
 
 
 /* Letter */
