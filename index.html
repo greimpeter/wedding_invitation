@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Julia &amp; Peter — Hochzeitseinladung</title>
+  <title data-i18n="web_title">Julia & Peter — Hochzeitseinladung</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -27,21 +27,21 @@
   <div class="page">
 
     <div id="countdown" class="countdown">
-      <div class="label">Countdown bis zur Hochzeit</div>
+      <div class="label" data-i18n="countdown">Countdown bis zur Hochzeit</div>
       <div id="countTimerMain" class="timer">— Tage —:—:—</div>
     </div>
 
     <div id="countdown-second" class="countdown countdown--light">
-      <div class="label">Update in</div>
+      <div class="label" data-i18n="update">Update in</div>
       <div id="countTimerSecond" class="timer">— Tage —:—:—</div>
     </div>
 
     <header class="hero">
       <div class="hero-content">
-        <h1 class="couple one-line-text">Julia & Peter</h1>
-        <p class="subtitle">heiraten!</p>
+        <h1 class="couple one-line-text" data-i18n="title">Julia & Peter</h1>
+        <p class="subtitle" data-i18n="title2">heiraten!</p>
         <img src="img/eheringe.png" alt="" class="rings">
-        <p class="date">03. Oktober 2026</p>
+        <p  data-i18n="date" class="date">03. Oktober 2026</p>
 
         <!-- <figure class="hero-photo" aria-hidden="true">
           <img src="img/verlobung.jpeg" alt="Julia & Peter"/>
@@ -63,27 +63,33 @@
 
 
       <section class="letter" aria-labelledby="letter-title">
-        <h2 id="letter-title">Liebe Familie, liebe Freunde,</h2>
-        <p class="letter-body">
-          was als fränkisch südtiroler Abenteuer in Marrakesch begann, wird nun besiegelt - wir heiraten.
-          Und das möchten wir mit dir feiern!<br><br>
+        <h2 id="letter-title" data-i18n="letter_title">Liebe Familie, liebe Freunde,</h2>
+        <p class="letter-body" data-i18n="letter">
+          <span data-i18n="letter1">was als fränkisch südtiroler Abenteuer in Marrakesch begann, wird nun besiegelt - wir heiraten.</span>
+          <span data-i18n="letter2">Und das möchten wir mit dir feiern!</span><br><br>
 
-          Nach der Trauung im Standesamt Brixen (Uhrzeit wird noch bekannt gegeben) verbringen wir den Tag am Burgerhof Meßner.<br>
-          Dort erwarten uns eine Mittagsjause, ein unklassischer Törggelen-Abend, gute Musik und jede Menge Spaß 
-          (Mehr zum Ablauf des Tages im Zuge des Updates)<br><br>
+          <span data-i18n="letter3">Nach der Trauung im Standesamt Brixen (Uhrzeit wird noch bekannt gegeben) 
+            verbringen wir den Tag am Burgerhof Meßner.</span><br>
+          <span data-i18n="letter4">Dort erwarten uns eine Mittagsjause, ein unklassischer Törggelen-Abend, gute Musik und jede Menge Spaß 
+            (Mehr zum Ablauf des Tages im Zuge des Updates).</span><br><br>
 
-          Wir haben Zimmer im Hotel Tourist reserviert, die gebucht werden können. Mehr Infos dazu <a href="#stay">hier</a>.<br><br>
+          <span data-i18n="letter5">Wir haben Zimmer im Hotel Tourist reserviert, die gebucht werden können. Mehr Infos dazu </span>
+          <a href="#stay"><span data-i18n="letter6">hier</span></a>.<br><br>
 
-          Bitte melde über das <a href="#rsvp">Anmeldeformular</a> unten bis zum <span style="font-weight: bold;">1. Mai 2026</span> zurück, ob du kommen kannst.<br><br>
+          <span data-i18n="letter7">Bitte melde über das </span>
+          <a href="#rsvp"><span data-i18n="letter8">Anmeldeformular</span></a> 
+          <span data-i18n="letter9">unten bis zum </span><span style="font-weight: bold;" data-i18n="letter10">1. Mai 2026</span> 
+          <span data-i18n="letter11">zurück, ob du kommen kannst.</span><br><br>
 
-          Der Tag soll frei von irgendwelchen Konventionen oder Zwängen sein.
-          Dresscode ist demnach elegant, but not too serious.<br><br>
+          <span data-i18n="letter12">Der Tag soll frei von irgendwelchen Konventionen oder Zwängen sein. 
+            Dresscode ist demnach elegant, but not too serious (übersetzt: Anzug ja, Krawatte nein 😊).</span><br><br>
 
-          Wir freuen uns auf einen unvergesslichen Tag!<br><br>
+          <span data-i18n="letter13">Wir freuen uns auf einen unvergesslichen Tag!</span><br><br>
 
-          <a href="#contact">Kontaktier</a> uns gerne bei Fragen.<br><br>
+          <a href="#contact"><span data-i18n="letter14">Kontaktier</span></a> <span data-i18n="letter15">uns gerne bei Fragen.</span><br><br>
 
-          P.S. Wenn du etwas schenken möchtest, freuen uns gerne über einen kleine finanzielle Unterstützung (die Verlobungsreise ist etwas ausgeartet 😉)
+          <span data-i18n="letter16">P.S. Wenn du etwas schenken möchtest, freuen uns gerne über einen kleine finanzielle Unterstützung 
+            (die Verlobungsreise ist etwas ausgeartet 😄)</span>
 
         </p>
         <div class="signatures">
@@ -109,60 +115,60 @@
 
 
       <section class="location" aria-labelledby="location-title">
-        <h3 id="location-title">Ort der Feier</h3>
+        <h3 id="location-title" data-i18n="location_title">Ort der Feier</h3>
 
-        <p>
-          Die Feier wird auf einem kleinen authentischen Bio Bauernhof stattfinden.<br>
-          Dort erwarten uns stilecht südtiroler Spezialitäten, hausgemachte Weine und eine idyllische Atmosphäre.
+        <p data-i18n="location">
+          <span data-i18n="location1">Die Feier wird auf einem kleinen authentischen Bio Bauernhof stattfinden.</span><br>
+          <span data-i18n="location2">Dort erwarten uns stilecht südtiroler Spezialitäten, hausgemachte Weine und eine idyllische Atmosphäre.</span>
         </p>
 
           <div class="location-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2735.142785258668!2d11.6389851762143!3d46.72264517112234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477805bb7349a151%3A0xd5c06b2acfd7a626!2sBurgerhof%20Me%C3%9Fner!5e0!3m2!1sde!2sat!4v1764880343477!5m2!1sde!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-        <p class="location-note">Adresse: Thalhoferstraße 7, 39042 Brixen, Italien</p>
+        <p class="location-note" data-i18n="address">Adresse: Thalhoferstraße 7, 39042 Brixen, Italien</p>
       </section>
 
       <section id="stay" class="stay" aria-labelledby="stay-title">
-        <h3 id="stay-title">Übernachtung</h3>
-        <p>Wir haben Zimmer im Hotel Tourist reserviert:</p>
+        <h3 id="stay-title" data-i18n="stay_title">Übernachtung</h3>
+        <p data-i18n="stay_text1">Wir haben Zimmer im Hotel Tourist reserviert:</p>
         <ul class="inline-list">
-          <li>Superior Doppelzimmer für 220€/Nacht (Mindestaufenthalt 2 Nächte) oder</li>
-          <li>Standardzimmer für 160€/Nacht (auch als Einzelzimmer möglich)</li>
+          <li data-i18n="room1">Superior Doppelzimmer für 220€/Nacht (Mindestaufenthalt 2 Nächte) oder</li>
+          <li data-i18n="room2">Standardzimmer für 160€/Nacht (auch als Einzelzimmer möglich)</li>
         </ul>
         <p>
-          Diese können bis zum 20. Juli telefonisch mit dem Code "Hochzeit Julia & Peter" gebucht werden (📞 +39 0472 831545). Bezahlung dann vor Ort im Hotel.<br><br>
-          Natürlich sind auch andere Hotels, Pensionen oder Ferienwohnungen in der Umgebung möglich.
+          <span data-i18n="stay_text2">Diese können bis zum 20. Juli telefonisch mit dem Code "Hochzeit Julia & Peter" gebucht werden (📞 +39 0472 831545). Bezahlung dann vor Ort im Hotel.</span><br><br>
+          <span data-i18n="stay_text3">Natürlich sind auch andere Hotels, Pensionen oder Ferienwohnungen in der Umgebung möglich. 
           Wir empfehlen aber in jedem Fall eine frühzeitige Buchung, 
-          weil Oktober Hauptsaison im Eisacktal ist und an diesem Tag auch noch ein Fest in Brixen stattfindet.
+          weil Oktober Hauptsaison im Eisacktal ist und an diesem Tag auch noch ein Fest in Brixen stattfindet.</span>
         </p>
       </section>
 
       <section id="rsvp" class="rsvp" aria-labelledby="rsvp-title">
-        <h3 id="rsvp-title">Rückmeldung <span style="font-weight: normal; font-size: 0.75em;">bitte 1x pro Person ausfüllen</span></h3>
+        <h3 id="rsvp-title"><span data-i18n="rsvp_title1">Rückmeldung</span> <span style="font-weight: normal; font-size: 0.75em;" data-i18n="rsvp_title2">bitte 1x pro Person ausfüllen</span></h3>
         
 
         <form id="rsvpForm" class="form" method="POST" action="https://formspree.io/f/mldveajv">
-          <div class="field"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
-          <div class="field"><span class="label">Kommst du? *</span>
-            <label><input type="radio" name="attending" value="Ja" required> Ja</label>
-            <label><input type="radio" name="attending" value="Nein"> Nein</label>
+          <div class="field"><label for="name"><span data-i18n="name">Name *</span></label><input type="text" id="name" name="name" required></div>
+          <div class="field"><span class="label" data-i18n="coming">Kommst du? *</span>
+            <label><input type="radio" name="attending" value="Ja" required> <span data-i18n="yes">Ja</span></label>
+            <label><input type="radio" name="attending" value="Nein"> <span data-i18n="no">Nein</span></label>
           </div>
 
-          <div class="field"><span class="label">Essen *</span>
-            <label><input type="radio" name="meal" value="Vegetarisch" required> Vegetarisch</label>
-            <label><input type="radio" name="meal" value="Fleisch"> Fleisch</label>
+          <div class="field"><span class="label" data-i18n="eating">Essen *</span>
+            <label><input type="radio" name="meal" value="Vegetarisch" required> <span data-i18n="vegetarian">Vegetarisch</span></label>
+            <label><input type="radio" name="meal" value="Fleisch"> <span data-i18n="meat">Fleisch</span></label>
           </div>
 
-          <div class="field"><label for="allergies">Unverträglichkeiten</label><textarea id="allergies" name="allergies" placeholder="z.B. Laktose, Gluten, Nüsse"></textarea></textarea></div>
+          <div class="field"><label for="allergies"><span data-i18n="allergies">Unverträglichkeiten</span></label><textarea id="allergies" name="allergies" placeholder="z.B. Laktose, Gluten, Nüsse" data-i18n-placeholder="placeholders.allergies"></textarea></div>
 
-          <div class="field dates"><span class="label">Evtl. weißt du auch schon deine Reisepläne</span>
-            <div><label for="arrival">Anreise </label><input type="date" id="arrival" name="arrival"></div>
-            <div><label for="departure">Abreise </label><input type="date" id="departure" name="departure"></div>
+          <div class="field dates"><span class="label" data-i18n="travel">Evtl. weißt du auch schon deine Reisepläne</span>
+            <div><label for="arrival"><span data-i18n="travel_there">Anreise </span></label> <input type="date" id="arrival" name="arrival"></div>
+            <div><label for="departure"><span data-i18n="travel_back">Abreise </span></label> <input type="date" id="departure" name="departure"></div>
           </div>
 
           <div class="form-actions">
-            <button id="submitBtn" type="submit">Absenden</button>
+            <button id="submitBtn" type="submit" data-i18n="submit">Absenden</button>
             <div id="formStatus" class="form-status"></div>
           </div>
         </form>
@@ -182,7 +188,7 @@
       </section> -->
 
       <section id="contact">
-        <h2>Kontakt</h2>
+        <h2 data-i18n="contact">Kontakt</h2>
 
         <div class="contact-item">
           <strong>Julia</strong><br>
@@ -213,6 +219,34 @@
 
   </div>
 
+  <div class="lang-switcher">
+  <div class="lang-current" id="langToggle">
+  <img id="currentFlag" src="https://flagcdn.com/w20/de.png" alt="German" />
+  <span id="currentLang">DE</span>
+  </div>
+
+
+  <div class="lang-menu" id="langMenu">
+  <div class="lang-option" data-lang="de" data-label="DE" data-flag="https://flagcdn.com/w20/de.png">
+  <img src="https://flagcdn.com/w20/de.png" alt="German" /> Deutsch
+  </div>
+  <div class="lang-option" data-lang="en" data-label="EN" data-flag="https://flagcdn.com/w20/gb.png">
+  <img src="https://flagcdn.com/w20/gb.png" alt="English" /> English
+  </div>
+  <div class="lang-option" data-lang="pl" data-label="PL" data-flag="https://flagcdn.com/w20/pl.png">
+  <img src="https://flagcdn.com/w20/pl.png" alt="Polish" /> Polski
+  </div>
+  <div class="lang-option" data-lang="it" data-label="IT" data-flag="https://flagcdn.com/w20/it.png">
+  <img src="https://flagcdn.com/w20/it.png" alt="Italian" /> Italiano
+  </div>
+  <div class="lang-option" data-lang="es" data-label="ES" data-flag="https://flagcdn.com/w20/es.png">
+  <img src="https://flagcdn.com/w20/es.png" alt="Spanish" /> Español
+  </div>
+  </div>
+  </div>
+
+
+  <script src="lang.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -278,6 +278,76 @@ button { padding: .8rem 1.4rem; border-radius: var(--radius); border: none; curs
   color: #8b4513; /* herbstliches Braun */
 }
 
+/* Language toggle */
+.lang-switcher {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.lang-current {
+display: flex;
+align-items: center;
+gap: 8px;
+padding: 8px 12px;
+background: #ffffff;
+border-radius: 999px;
+cursor: pointer;
+box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+
+.lang-current img {
+width: 22px;
+height: 16px;
+object-fit: cover;
+border-radius: 2px;
+}
+
+
+.lang-menu {
+position: absolute;
+bottom: 52px;
+right: 0;
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+overflow: hidden;
+display: none;
+}
+
+
+.lang-menu.open {
+display: block;
+}
+
+
+.lang-option {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 10px 14px;
+cursor: pointer;
+white-space: nowrap;
+}
+
+
+.lang-option:hover {
+background: #f2f2f2;
+}
+
+
+.lang-option img {
+width: 22px;
+height: 16px;
+object-fit: cover;
+border-radius: 2px;
+}
+
+
 
 
 
