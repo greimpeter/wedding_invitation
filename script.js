@@ -53,7 +53,7 @@ function createCountdown(elementId, targetDateString) {
 createCountdown("countTimerMain", "2026-10-03T12:00:00");
 
 // Second countdown – freely choose date
-createCountdown("countTimerSecond", "2026-06-15T20:00:00");
+createCountdown("countTimerSecond", "2026-06-31T20:00:00");
 
 
 // RSVP Form handling with Formspree
