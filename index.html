@@ -38,10 +38,12 @@
 
     <header class="hero">
       <div class="hero-content">
+        <h3 data-i18n="update_title" class="update red">Updates in Rot</span></h3>
         <h1 class="couple one-line-text" data-i18n="title">Julia & Peter</h1>
         <p class="subtitle" data-i18n="title2">heiraten!</p>
         <img src="img/eheringe.png" alt="" class="rings">
         <p  data-i18n="date" class="date">03. Oktober 2026</p>
+        
 
         <!-- <figure class="hero-photo" aria-hidden="true">
           <img src="img/verlobung.jpeg" alt="Julia & Peter"/>
@@ -61,28 +63,38 @@
 
       <!--<div class=" invitation-header"><h1>🎉 Einladung 🎉</h1></div>-->
 
-
       <section class="letter" aria-labelledby="letter-title">
         <h2 id="letter-title" data-i18n="letter_title">Liebe Familie, liebe Freunde,</h2>
         <p class="letter-body" data-i18n="letter">
           <span data-i18n="letter1">was als fränkisch südtiroler Abenteuer in Marrakesch begann, wird nun besiegelt - wir heiraten.</span>
           <span data-i18n="letter2">Und das möchten wir mit dir feiern!</span><br><br>
 
-          <span data-i18n="letter3">Nach der Trauung im Standesamt Brixen (Uhrzeit wird noch bekannt gegeben) 
-            verbringen wir den Tag am Burgerhof Meßner.</span><br>
-          <span data-i18n="letter4">Dort erwarten uns eine Mittagsjause, ein unklassischer Törggelen-Abend, gute Musik und jede Menge Spaß 
-            (Mehr zum Ablauf des Tages im Zuge des Updates).</span><br><br>
+          <!--<span data-i18n="letter3">Nach der Trauung im Standesamt Brixen (Uhrzeit wird noch bekannt gegeben) 
+            verbringen wir den Tag am Burgerhof Meßner.</span><br>-->
+          <span class="red" data-i18n="letter3">Wir haben uns dazu entschieden, die standesamtliche Trauunng im Familienkreis
+            zu belassen; dafür wollen wir dann aber mit allen zusammen eine freie Trauung in der Kapelle neben dem Bauernhof machen.</span><br>
+            <span class="red" data-i18n="letter31" style="font-weight: bold;">Wir treffen uns somit um 12 Uhr vor dem Standesamt Brixen</span>
+            <span class="red">(Maria-Hueber-Platz 3, 39042 Brixen) </span>
+            <span class="red" data-i18n="letter32">und fahren gemeinsam mit organisierten Taxis hoch.</span><br> 
+            <span class="red" data-i18n="letter33">Bitte lasst eure Autos in Brixen, weil beim Bauernhof nur wenige Plätze vorhanden sind und die auch schon belegt sind.
+            Für die Heimfahrt können dann individuell Taxis organisiert werden.
+          </span><br><br>
+          <span data-i18n="letter4">Dort erwarten uns eine Mittagsjause, ein unklassischer Törggelen-Abend, gute Musik und jede Menge Spaß</span> (<span data-i18n="letter42" class="red">Genauer Ablauf siehe weiter</span> <a href="#agenda"><span data-i18n="letter43">unten</span></a>).
+          <br><br>
 
-          <span data-i18n="letter5">Wir haben Zimmer im Hotel Tourist reserviert, die gebucht werden können. Mehr Infos dazu </span>
-          <a href="#stay"><span data-i18n="letter6">hier</span></a>.<br><br>
+          <span data-i18n="letter5" class="strike-through">Wir haben Zimmer im Hotel Tourist reserviert, die gebucht werden können. Mehr Infos dazu </span>
+          <a href="#stay"><span data-i18n="letter6" class="strike-through">hier</span></a>.
+          <span class="red" data-i18n="letter61">Das Hotel ist mittlerweile ausgebucht.</span><br><br>
 
           <span data-i18n="letter7">Bitte melde über das </span>
           <a href="#rsvp"><span data-i18n="letter8">Anmeldeformular</span></a> 
-          <span data-i18n="letter9">unten bis zum </span><span style="font-weight: bold;" data-i18n="letter10">1. Mai 2026</span> 
+          <span data-i18n="letter9">unten bis zum </span><span style="font-weight: bold;" data-i18n="letter10">31. Juli 2026</span> 
           <span data-i18n="letter11">zurück, ob du kommen kannst.</span><br><br>
 
           <span data-i18n="letter12">Der Tag soll frei von irgendwelchen Konventionen oder Zwängen sein. 
-            Dresscode ist demnach elegant, but not too serious (übersetzt: Anzug ja, Krawatte nein 😊).</span><br><br>
+            Dresscode ist demnach elegant, but not too serious (übersetzt: Anzug ja, Krawatte nein 😊;</span>
+            <span class="red" data-i18n="letter122">oder auch etwas professioneller und zum Googln oder den ChatGPT Chat:</span> 
+            <span class="red">'Smart Casual Hochzeit'</span>)<br><br>
 
           <span data-i18n="letter13">Wir freuen uns auf einen unvergesslichen Tag!</span><br><br>
 
@@ -100,16 +112,21 @@
         </div>
       </section>
 
-      <!-- <img src="img/keschtn.png" alt="" class="interim-image">
+      <!-- <img src="img/keschtn.png" alt="" class="interim-image">-->
 
-      <section class="agenda" aria-labelledby="agenda-title">
-        <h3 id="agenda-title">Agenda des Tages</h3>
+      <section id="agenda" class="agenda red" aria-labelledby="agenda-title">
+        <h3 id="agenda-title" data-i18n="ablauf_title">Ablauf</h3>
         <ul>
-          <li><span class="time"><strong>11:00</strong></span><span class="desc">Trauung very long</span></li>
-          <li><span class="time"><strong>11:00</strong></span><span class="desc">Aperitif</span></li>
-          <li><span class="time"><strong>11:00</strong></span><span class="desc">Törggelen</span></li>
+          <li><span class="time"><strong>12:00</strong></span><span class="desc" data-i18n="ablauf1">Treffpunkt Standesamt und gemeinsame Hochfahrt</span></li>
+          <li><span class="time"><strong>12:30</strong></span><span class="desc" data-i18n="ablauf2">Empfang und Mittagsjause</span></li>
+          <li><span class="time"><strong>14:30</strong></span><span class="desc" data-i18n="ablauf3">Freie Trauung</span></li>
+          <li><span class="time"><strong>ab 15:30</strong></span><span class="desc" data-i18n="ablauf4">Gemütlicher Nachmittag mit Musik und Wein</span></li>
+          <li><span class="time"><strong>18:30</strong></span><span class="desc" data-i18n="ablauf5">Törggelen</span></li>
+          <li><span class="time"><strong>ab 21:00</strong></span><span class="desc" data-i18n="ablauf6">DJ Ivi</span></li>
+          <li><span class="time"><strong>24:00</strong></span><span class="desc" data-i18n="ablauf7">Mitternachtssnack</span></li>
+          <li><span class="time"><strong>02:00</strong></span><span class="desc" data-i18n="ablauf8">Ende</span></li>
         </ul>
-      </section> -->
+      </section>
 
       <img src="img/feiern.png" alt="" class="interim-image">
 
@@ -130,15 +147,16 @@
       </section>
 
       <section id="stay" class="stay" aria-labelledby="stay-title">
-        <h3 id="stay-title" data-i18n="stay_title">Übernachtung</h3>
-        <p data-i18n="stay_text1">Wir haben Zimmer im Hotel Tourist reserviert:</p>
+        <h3 id="stay-title" data-i18n="stay_title" class="strike-through">Übernachtung</h3>
+        <!-- <p class="red" data-i18n="stay_text0">Das Hotel Tourist ist mittlerweile voll.</p> -->
+        <p data-i18n="stay_text1" class="strike-through">Wir haben Zimmer im Hotel Tourist reserviert:</p>
         <ul class="inline-list">
-          <li data-i18n="room1">Superior Doppelzimmer für 220€/Nacht (Mindestaufenthalt 2 Nächte) oder</li>
-          <li data-i18n="room2">Standardzimmer für 160€/Nacht (auch als Einzelzimmer möglich)</li>
+          <li data-i18n="room1" class="strike-through">Superior Doppelzimmer für 220€/Nacht (Mindestaufenthalt 2 Nächte) oder</li>
+          <li data-i18n="room2" class="strike-through">Standardzimmer für 160€/Nacht (auch als Einzelzimmer möglich)</li>
         </ul>
         <p>
-          <span data-i18n="stay_text2">Diese können bis zum 20. Juli telefonisch mit dem Code "Hochzeit Julia & Peter" gebucht werden (📞 +39 0472 831545). Bezahlung dann vor Ort im Hotel.</span><br><br>
-          <span data-i18n="stay_text3">Natürlich sind auch andere Hotels, Pensionen oder Ferienwohnungen in der Umgebung möglich. 
+          <span data-i18n="stay_text2" class="strike-through">Diese können bis zum 20. Juli telefonisch mit dem Code "Hochzeit Julia & Peter" gebucht werden (📞 +39 0472 831545). Bezahlung dann vor Ort im Hotel.</span><br><br>
+          <span data-i18n="stay_text3" class="strike-through">Natürlich sind auch andere Hotels, Pensionen oder Ferienwohnungen in der Umgebung möglich. 
           Wir empfehlen aber in jedem Fall eine frühzeitige Buchung, 
           weil Oktober Hauptsaison im Eisacktal ist und an diesem Tag auch noch ein Fest in Brixen stattfindet.</span>
         </p>
@@ -200,6 +218,15 @@
           <strong>Peter</strong><br>
           <i class="fa-solid fa-phone"></i> <a>+43 664 88559660</a><br>
           <i class="fa-solid fa-envelope"></i> <a>peter.greim5@gmail.com</a>
+        </div>
+        <div class="contact-item red">
+          <p data-i18n="contacttext">Und am Tag der Hochzeit:</p>
+          <strong>Alex</strong><br>
+          <i class="fa-solid fa-phone"></i> <a>+43 699 10762055</a><br>
+        </div>
+        <div class="contact-item red">
+          <strong>Jakob</strong><br>
+          <i class="fa-solid fa-phone"></i> <a>+43 699 17359716</a><br>
         </div>
       </section>
 

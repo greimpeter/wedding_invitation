@@ -170,6 +170,17 @@ section {
   box-shadow: 0 2px 8px #0001;
 }
 h2,h3 { font-family: "Libre Baskerville", serif; }
+.update {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.red { color: red; }
+
+/* Content */
+
+.strike-through {
+  text-decoration: line-through;
+}
 
 
 /* Letter */
@@ -209,6 +220,7 @@ h2,h3 { font-family: "Libre Baskerville", serif; }
 .agenda li:last-child {
   border-bottom: none;
 }
+.desc { text-align: right; }
 @media (max-width: 550px) {
   .agenda li {
     grid-template-columns: 1fr;
