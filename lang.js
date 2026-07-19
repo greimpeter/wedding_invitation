@@ -81,7 +81,7 @@ const translations = {
     ablauf3: "Freie Trauung",
     ablauf4: "Gemütlicher Nachmittag mit Musik und Wein",
     ablauf5: "Törggelen",
-    ablauf6: "DJ Ivi",
+    ablauf6: "DJ",
     ablauf7: "Mitternachtssnack",
     ablauf8: "Ende",
     contacttext: "Und am Tag der Hochzeit:",
@@ -181,7 +181,7 @@ en: {
   ablauf3: "Symbolic wedding ceremony",
   ablauf4: "Relaxed afternoon with music and wine",
   ablauf5: "Törggelen dinner",
-  ablauf6: "DJ Ivi",
+  ablauf6: "DJ",
   ablauf7: "Midnight snack",
   ablauf8: "End",
 
@@ -283,7 +283,7 @@ it: {
   ablauf3: "Cerimonia simbolica",
   ablauf4: "Pomeriggio rilassato con musica e vino",
   ablauf5: "Cena Törggelen",
-  ablauf6: "DJ Ivi",
+  ablauf6: "DJ",
   ablauf7: "Spuntino di mezzanotte",
   ablauf8: "Fine",
 
@@ -390,7 +390,7 @@ pl: {
   ablauf3: "Ceremonia symboliczna",
   ablauf4: "Relaksujące popołudnie z muzyką i winem",
   ablauf5: "Kolacja Törggelen",
-  ablauf6: "DJ Ivi",
+  ablauf6: "DJ",
   ablauf7: "Przekąska o północy",
   ablauf8: "Zakończenie",
 
@@ -498,7 +498,7 @@ es: {
   ablauf3: "Ceremonia simbólica",
   ablauf4: "Tarde relajada con música y vino",
   ablauf5: "Cena Törggelen",
-  ablauf6: "DJ Ivi",
+  ablauf6: "DJ",
   ablauf7: "Bocadillo de medianoche",
   ablauf8: "Fin",
 
